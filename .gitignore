@@ -1,40 +1,34 @@
-# Build output
-dist/
-
-# Dependencies
+# dependencies
 node_modules/
 
-# Logs
+# next.js
+.next/
+out/
+.vercel/
+.turbo/
+
+# build output (if you produce it)
+dist/
+
+# env
+.env*
+!.env.example
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Environment variables
-.env
-.env.production
+# test / tooling
+coverage/
+*.tsbuildinfo
 
-# macOS-specific files
+# OS / editor
 .DS_Store
-
-# VS Code settings
+Thumbs.db
 .vscode/
-
-# Git-specific files
-.git/
-.gitconfig
-
-
-# Other editor/IDE settings
 .idea/
 *.iml
-
-# Temporary/system files
 *.swp
 *.tmp
-Thumbs.db
-.next
-node_modules
-.vercel
-.env
-.env.local
