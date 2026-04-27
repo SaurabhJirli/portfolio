@@ -1,0 +1,25 @@
+import Hero from "@/components/landing/Hero";
+import ProjectsPreview from "@/components/landing/ProjectsPreview";
+import Statement from "@/components/landing/Statement";
+import StackPeview from "@/components/landing/StackPeview";
+import ContactCta from "@/components/global/ContactCta";
+import Wrapper from "@/components/fundations/containers/Wrapper";
+import RevealWrapper from "@/components/global/RevealWrapper";
+
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <ProjectsPreview />
+      <Statement />
+      <StackPeview />
+      <section className="bg-base-50 dark:bg-base-900">
+        <Wrapper variant="standard" className="py-24 lg:py-36">
+          <RevealWrapper stagger={0.06}>
+            <ContactCta />
+          </RevealWrapper>
+        </Wrapper>
+      </section>
+    </>
+  );
+}

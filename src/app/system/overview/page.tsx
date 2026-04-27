@@ -1,0 +1,139 @@
+import Text from "@/components/fundations/elements/Text";
+import Wrapper from "@/components/fundations/containers/Wrapper";
+
+const pageData = [
+  {
+    sectionTitle: "Static",
+    categories: [
+      {
+        title: "Main",
+        links: [
+          { url: "/", name: "Home" },
+          { url: "/404", name: "Error 404" },
+        ],
+      },
+      {
+        title: "About",
+        links: [
+          { url: "/now", name: "Now" },
+          { url: "/stack", name: "Stack" },
+          { url: "/socials", name: "Socials" },
+          { url: "/studio", name: "Studio" },
+        ],
+      },
+      {
+        title: "Forms",
+        links: [
+          { url: "/forms/reset", name: "Reset" },
+          { url: "/forms/signin", name: "Sign in" },
+          { url: "/forms/signup", name: "Sign up" },
+          { url: "/forms/contact", name: "Contact" },
+        ],
+      },
+      {
+        title: "System Pages",
+        links: [
+          { name: "Links", url: "/system/link" },
+          { name: "Colors", url: "/system/colors" },
+          { name: "Buttons", url: "/system/buttons" },
+          { name: "Typography", url: "/system/typography" },
+          {
+            name: "License",
+            url: "https://lexingtonthemes.com/legal/license/",
+          },
+          {
+            name: "Documentation",
+            url: "https://lexingtonthemes.com/documentation",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    sectionTitle: "Content Collections",
+    categories: [
+      {
+        title: "Blog Pages",
+        links: [
+          { url: "/blog/", name: "Blog home" },
+          { url: "/blog/posts/1", name: "Post" },
+          { url: "/blog/tags", name: "Tag index" },
+          { url: "/blog/tags/webdev", name: "Tag category" },
+          { url: "/rss.xml", name: "RSS" },
+        ],
+      },
+      {
+        title: "Projects",
+        links: [
+          { url: "/projects/", name: "Home" },
+          { url: "/projects/1", name: "Details" },
+        ],
+      },
+      {
+        title: "Work",
+        links: [
+          { url: "/work/", name: "Home" },
+          { url: "/work/1", name: "Details" },
+        ],
+      },
+      {
+        title: "Store",
+        links: [
+          { url: "/store/", name: "Store" },
+          { url: "/store/1", name: "Product Page" },
+        ],
+      },
+    ],
+  },
+];
+
+export default function OverviewPage() {
+  return (
+    <section>
+      <Wrapper variant="standard" className="py-24">
+        <Text
+          tag="h1"
+          variant="displayXL"
+          className="mt-12 dark:text-white text-base-900 text-balance font-display"
+        >
+          Overview
+        </Text>
+        <div className="flex flex-col mt-12 gap-12">
+          {pageData.map((section) => (
+            <div key={section.sectionTitle} className="md:col-span-2">
+              <Text tag="p" variant="textBase" className="dark:text-white text-base-900">
+                {section.sectionTitle}
+              </Text>
+              <div className="pt-4 mt-4 border-t grid grid-cols-2 md:grid-cols-4 gap-y-12 dark:border-base-900 border-base-200">
+                {section.categories.map((category) => (
+                  <div key={category.title} className="flex flex-col">
+                    <Text tag="h3" variant="textBase" className="dark:text-white fotn-medium text-base-900">
+                      {category.title}
+                    </Text>
+                    <div className="mt-1">
+                      {category.links.map((link) => (
+                        <div key={link.url + link.name}>
+                          <Text
+                            tag="a"
+                            variant="textSM"
+                            underlined={true}
+                            className="dark:text-base-400 text-base-600"
+                            href={link.url}
+                            title={link.name}
+                            aria-label={link.name}
+                          >
+                            {link.name}
+                          </Text>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Wrapper>
+    </section>
+  );
+}
