@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Route } from "next";
-import Fuse from "fuse.js";
 import Button from "@/components/fundations/elements/Button";
 import SearchIcon from "@/components/fundations/icons/Search";
 
@@ -18,17 +17,15 @@ export default function SearchClient({ posts }: { posts: SearchItem[] }) {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement | null>(null);
 
-  const fuse = useMemo(
-    () =>
-      new Fuse(posts, {
-        keys: ["title", "description"],
-        threshold: 0.3,
-        includeMatches: true,
-      }),
-    [posts]
-  );
-
-  const results = query.trim() ? fuse.search(query.trim()) : [];
+  const results = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return posts.filter(
+      (p) =>
+        p.title.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q)
+    );
+  }, [query, posts]);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -119,17 +116,17 @@ export default function SearchClient({ posts }: { posts: SearchItem[] }) {
                   </h3>
                 </div>
               ) : (
-                results.map((result) => (
+                results.map((item) => (
                   <Link
-                    key={result.item.slug}
-                    href={`/blog/posts/${result.item.slug}` as Route}
+                    key={item.slug}
+                    href={`/blog/posts/${item.slug}` as Route}
                     className="block p-8 hover:bg-zinc-100 duration-300 dark:hover:bg-white/5"
                   >
                     <h3 className="block text-sm font-medium text-zinc-900 dark:text-white">
-                      {result.item.title}
+                      {item.title}
                     </h3>
                     <p className="block text-xs text-zinc-500">
-                      {result.item.description}
+                      {item.description}
                     </p>
                   </Link>
                 ))
