@@ -11,7 +11,6 @@ Portfolio showcasing my work as a Software Development Engineer at Touchcore Sys
 - **Framework:** Next.js 15 (App Router)
 - **Styling:** Tailwind CSS 4
 - **Content:** Markdown with gray-matter
-- **Search:** Fuse.js
 - **Language:** TypeScript
 
 ## Requirements
