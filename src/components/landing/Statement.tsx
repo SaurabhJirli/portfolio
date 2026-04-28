@@ -22,7 +22,7 @@ export default function Statement() {
         <p
           ref={textRef}
           data-reveal
-          className="mx-auto max-w-4xl text-center font-display italic text-4xl sm:text-5xl lg:text-6xl leading-[1.15] tracking-tight text-base-900 dark:text-white"
+          className="mx-auto max-w-4xl text-center font-display italic text-4xl sm:text-5xl lg:text-6xl leading-[1.15] tracking-tight text-text-primary"
         >
           {words.map((word, i) => (
             <span key={i} className="inline-block mr-[0.3em] last:mr-0">

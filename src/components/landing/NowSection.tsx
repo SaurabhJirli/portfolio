@@ -30,22 +30,22 @@ export default function NowSection() {
               <Text
                 tag="h2"
                 variant="displayLG"
-                className="tracking-tight text-base-900 dark:text-white"
+                className="tracking-tight text-text-primary"
               >
                 What I&rsquo;m focused on{" "}
-                <span className="italic font-display text-base-400 dark:text-base-500">
+                <span className="italic font-display text-text-muted">
                   now
                 </span>
               </Text>
               <Text
                 tag="p"
                 variant="textLG"
-                className="mt-5 text-base-500 dark:text-base-400 leading-relaxed max-w-[48ch]"
+                className="mt-5 text-text-secondary leading-relaxed max-w-[48ch]"
               >
                 Backend-leaning full-stack developer working across APIs, data
                 flows, cloud-based applications, and IoT-related systems.
               </Text>
-              <p className="mt-6 text-xs font-mono text-base-400 dark:text-base-600 tracking-wide">
+              <p className="mt-6 text-xs font-mono text-text-muted tracking-wide">
                 Updated March 2026
               </p>
             </div>
@@ -57,14 +57,14 @@ export default function NowSection() {
                   data-reveal
                   className={`flex items-baseline gap-5 py-5${
                     i < FOCUS_ROWS.length - 1
-                      ? " border-b border-base-200 dark:border-base-800"
+                      ? " border-b border-border-subtle"
                       : ""
                   }`}
                 >
-                  <span className="shrink-0 text-xs font-mono text-base-400 dark:text-base-600 tabular-nums">
+                  <span className="shrink-0 text-xs font-mono text-text-muted tabular-nums">
                     {row.num}
                   </span>
-                  <p className="text-base leading-relaxed text-base-600 dark:text-base-400">
+                  <p className="text-base leading-relaxed text-text-secondary">
                     {row.text}
                   </p>
                 </div>

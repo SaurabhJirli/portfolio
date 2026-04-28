@@ -52,7 +52,7 @@ const contactLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-base-200 dark:border-base-800">
+    <footer className="border-t border-border-subtle">
       <Wrapper variant="standard" className="py-20 lg:py-28">
         {/* Identity + Contact actions */}
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -61,12 +61,12 @@ export default function Footer() {
               <Text
                 tag="span"
                 variant="displayLG"
-                className="italic tracking-tight font-display text-base-900 dark:text-white"
+                className="italic tracking-tight font-display text-text-primary"
               >
                 Saurabh Jirli
               </Text>
             </Link>
-            <p className="mt-3 text-sm text-base-500 dark:text-base-400 max-w-sm leading-relaxed text-pretty">
+            <p className="mt-3 text-sm text-text-secondary max-w-sm leading-relaxed text-pretty">
               Software development engineer building backend services, cloud-based applications, and IoT-related systems, with frontend work when the project needs it.
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function Footer() {
                 href={link.href}
                 target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={link.href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-                className="group flex items-center gap-2 text-sm text-base-500 dark:text-base-400 hover:text-base-900 dark:hover:text-white transition-colors duration-200"
+                className="group flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary transition-colors duration-200"
                 aria-label={link.label}
               >
                 <span className="transition-transform duration-200 group-hover:-translate-y-0.5">
@@ -91,19 +91,19 @@ export default function Footer() {
         </div>
 
         {/* Navigation + Copyright */}
-        <div className="mt-14 pt-6 border-t border-base-200 dark:border-base-800 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 pt-6 border-t border-border-subtle flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <nav className="flex flex-wrap items-center gap-x-5 gap-y-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href as Route}
-                className="text-sm text-base-400 dark:text-base-500 hover:text-base-900 dark:hover:text-white transition-colors duration-200"
+                className="text-sm text-text-muted hover:text-text-primary transition-colors duration-200"
               >
                 {link.text}
               </Link>
             ))}
           </nav>
-          <p className="text-xs text-base-400 dark:text-base-600">
+          <p className="text-xs text-text-muted">
             &copy; {new Date().getFullYear()} Saurabh Jirli
           </p>
         </div>

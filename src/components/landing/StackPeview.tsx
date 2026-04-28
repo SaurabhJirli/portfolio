@@ -13,7 +13,7 @@ export default function StackPeview() {
             <Text
               tag="h2"
               variant="displayLG"
-              className="italic tracking-tight font-display text-base-900 dark:text-white"
+              className="italic tracking-tight font-display text-text-primary"
             >
               Stack
             </Text>

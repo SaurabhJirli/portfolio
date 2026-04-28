@@ -11,14 +11,14 @@ export default function StackPage() {
           <Text
             tag="h1"
             variant="displayXL"
-            className="text-base-900 dark:text-white tracking-tight"
+            className="text-text-primary tracking-tight"
           >
             Tools I{" "}
-            <span className="italic font-display text-base-500 dark:text-base-400">
+            <span className="italic font-display text-text-muted">
               use
             </span>
           </Text>
-          <Text tag="p" variant="textLG" className="mt-4 text-base-400 dark:text-base-500 leading-relaxed max-w-lg">
+          <Text tag="p" variant="textLG" className="mt-4 text-text-muted leading-relaxed max-w-lg">
             Languages, frameworks, databases, and infrastructure I work with regularly.
           </Text>
         </div>

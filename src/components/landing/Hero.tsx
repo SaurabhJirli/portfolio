@@ -115,14 +115,14 @@ export default function Hero() {
       >
         <div className="mx-auto w-full max-w-4xl text-center">
           <p
-            className="text-sm text-base-500 dark:text-base-400 font-mono tracking-wide"
+            className="text-sm text-text-muted font-mono tracking-wide"
             data-hero-reveal
           >
             Saurabh Jirli &mdash; Software Development Engineer
           </p>
 
           <h1
-            className="mt-6 font-display italic tracking-tight leading-[1.08] text-base-900 dark:text-white text-wrap-balance"
+            className="mt-6 font-display italic tracking-tight leading-[1.08] text-text-primary text-wrap-balance"
             style={{ fontSize: "clamp(2.75rem, 5.5vw, 4.75rem)" }}
             aria-label={TYPED_HEADLINE}
           >
@@ -139,7 +139,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="mx-auto mt-6 text-lg sm:text-xl leading-relaxed text-base-500 dark:text-base-400 max-w-[54ch]"
+            className="mx-auto mt-6 text-lg sm:text-xl leading-relaxed text-text-secondary max-w-[54ch]"
             data-hero-reveal
           >
             Software development engineer building backend services, cloud-based

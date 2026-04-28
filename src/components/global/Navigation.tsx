@@ -60,7 +60,7 @@ export default function Navigation() {
       className={
         "sticky top-0 z-40 transition-all duration-300 " +
         (scrolled
-          ? "bg-white/90 dark:bg-base-950/90 backdrop-blur-2xl border-b border-base-200/50 dark:border-base-800/50"
+          ? "bg-canvas/90 backdrop-blur-2xl border-b border-border-subtle"
           : "bg-transparent border-b border-transparent")
       }
     >
@@ -71,8 +71,8 @@ export default function Navigation() {
             aria-label="Go to homepage"
             className="flex items-center gap-2.5 group"
           >
-            <Logo className="size-5 text-base-900 dark:text-white transition-transform duration-300 group-hover:scale-110" />
-            <span className="font-display text-lg tracking-tight text-base-900 dark:text-white">
+            <Logo className="size-5 text-text-primary transition-transform duration-300 group-hover:scale-110" />
+            <span className="font-display text-lg tracking-tight text-text-primary">
               Saurabh Jirli
             </span>
           </Link>
@@ -87,14 +87,14 @@ export default function Navigation() {
                   className={
                     "relative px-3.5 py-2 text-[13px] tracking-wide transition-colors duration-200 " +
                     (active
-                      ? "text-base-900 dark:text-white"
-                      : "text-base-400 dark:text-base-500 hover:text-base-900 dark:hover:text-white")
+                      ? "text-text-primary"
+                      : "text-text-muted hover:text-text-primary")
                   }
                   aria-current={active ? "page" : undefined}
                 >
                   {link.text}
                   {active && (
-                    <span className="absolute bottom-0 left-3.5 right-3.5 h-px bg-base-900 dark:bg-white" />
+                    <span className="absolute bottom-0 left-3.5 right-3.5 h-px bg-text-primary" />
                   )}
                 </Link>
               );
@@ -107,7 +107,7 @@ export default function Navigation() {
             aria-controls="menu"
             aria-expanded={open}
             aria-label="Open menu"
-            className="lg:hidden p-2 -mr-2 rounded-md text-base-900 dark:text-white hover:bg-base-100 dark:hover:bg-base-900 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-400"
+            className="lg:hidden p-2 -mr-2 rounded-md text-text-primary hover:bg-surface transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-400"
             onClick={() => setOpen((prev) => !prev)}
           >
             <span className="sr-only">Toggle menu</span>
@@ -119,7 +119,7 @@ export default function Navigation() {
             aria-hidden={!open}
             inert={!open || undefined}
             className={
-              "fixed inset-0 z-50 transition-opacity duration-300 ease-out bg-white/95 dark:bg-base-950/95 backdrop-blur-2xl lg:hidden " +
+              "fixed inset-0 z-50 transition-opacity duration-300 ease-out bg-canvas/95 backdrop-blur-2xl lg:hidden " +
               (open ? "opacity-100" : "opacity-0 pointer-events-none")
             }
           >
@@ -130,15 +130,15 @@ export default function Navigation() {
                   className="flex items-center gap-2.5"
                   onClick={() => setOpen(false)}
                 >
-                  <Logo className="size-5 text-base-900 dark:text-white" />
-                  <span className="font-display text-lg tracking-tight text-base-900 dark:text-white">
+                  <Logo className="size-5 text-text-primary" />
+                  <span className="font-display text-lg tracking-tight text-text-primary">
                     Saurabh Jirli
                   </span>
                 </Link>
                 <button
                   id="closeMenu"
                   aria-label="Close menu"
-                  className="p-2 -mr-2 rounded-md text-base-900 dark:text-white hover:bg-base-100 dark:hover:bg-base-900 transition-colors duration-200"
+                  className="p-2 -mr-2 rounded-md text-text-primary hover:bg-surface transition-colors duration-200"
                   onClick={() => setOpen(false)}
                 >
                   <Plus className="size-5 shrink-0" />
@@ -157,8 +157,8 @@ export default function Navigation() {
                       className={
                         "px-4 py-3 text-2xl rounded-lg transition-colors duration-200 " +
                         (active
-                          ? "font-medium text-base-900 dark:text-white bg-base-100 dark:bg-base-900"
-                          : "font-light text-base-900 dark:text-white hover:bg-base-100 dark:hover:bg-base-900")
+                          ? "font-medium text-text-primary bg-surface-inset"
+                          : "font-light text-text-primary hover:bg-surface")
                       }
                       onClick={() => setOpen(false)}
                     >

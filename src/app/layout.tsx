@@ -53,7 +53,7 @@ export default function RootLayout({
           <style dangerouslySetInnerHTML={{ __html: '[data-reveal]{opacity:1!important;transform:none!important}' }} />
         </noscript>
       </head>
-      <body className="flex flex-col min-h-[100dvh] bg-white dark:bg-base-950 text-base-900 dark:text-white" suppressHydrationWarning>
+      <body className="flex flex-col min-h-[100dvh] bg-canvas text-text-primary" suppressHydrationWarning>
         <div className="grain-overlay" aria-hidden="true" />
         <ThemeToggle className="" aria-label="Toggle theme" />
         <Search />

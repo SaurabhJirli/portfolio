@@ -16,17 +16,17 @@ export default async function BlogIndexPage() {
             <Text
               tag="h1"
               variant="displayXL"
-              className="text-base-900 dark:text-white tracking-tight"
+              className="text-text-primary tracking-tight"
             >
               Blog:{" "}
-              <span className="italic font-display text-base-500 dark:text-base-400">
+              <span className="italic font-display text-text-muted">
                 notes and write-ups
               </span>
             </Text>
             <Text
               tag="p"
               variant="textLG"
-              className="mt-4 text-base-500 dark:text-base-400 leading-relaxed"
+              className="mt-4 text-text-secondary leading-relaxed"
             >
               Things I've learned, problems I've solved, and thoughts on software engineering.
             </Text>

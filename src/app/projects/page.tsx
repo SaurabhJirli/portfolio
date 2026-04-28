@@ -10,13 +10,13 @@ export default async function ProjectsIndexPage() {
     <section>
       <Wrapper variant="standard" className="py-20 lg:py-32">
         <div className="max-w-2xl">
-          <Text tag="h1" variant="displayXL" className="text-base-900 dark:text-white tracking-tight">
+          <Text tag="h1" variant="displayXL" className="text-text-primary tracking-tight">
             Things I've{" "}
-            <span className="italic font-display text-base-500 dark:text-base-400">
+            <span className="italic font-display text-text-muted">
               built
             </span>
           </Text>
-          <Text tag="p" variant="textLG" className="mt-4 text-base-500 dark:text-base-400 leading-relaxed">
+          <Text tag="p" variant="textLG" className="mt-4 text-text-secondary leading-relaxed">
             Side projects and work projects where I got to solve interesting problems
             and learn new tools along the way.
           </Text>

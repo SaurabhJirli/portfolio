@@ -49,13 +49,10 @@ function LogoTile({
           ? "w-20 h-20 sm:w-[5.5rem] sm:h-[5.5rem] gap-1.5"
           : "w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] gap-1"
         }
-        bg-base-50/50 dark:bg-base-900/30
-        border border-base-200/40 dark:border-base-800/30
+        bg-surface
+        border border-border-subtle
         transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]
-        hover:bg-white hover:border-base-200/80
-        hover:shadow-[0_2px_12px_rgba(0,0,0,0.04)]
-        dark:hover:bg-base-900/50 dark:hover:border-base-700/40
-        dark:hover:shadow-[0_2px_12px_rgba(0,0,0,0.15)]`}
+        hover:bg-surface-elevated hover:border-border-strong`}
     >
       <img
         src={item.stackLogo}
@@ -65,7 +62,7 @@ function LogoTile({
         className={`${isPrimary ? "size-9 sm:size-10" : "size-7 sm:size-8"} object-contain transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105${item.darkInvert ? " dark:invert" : ""}`}
       />
       <span
-        className={`${isPrimary ? "text-[10px]" : "text-[9px]"} font-medium tracking-wide text-base-400 dark:text-base-500
+        className={`${isPrimary ? "text-[10px]" : "text-[9px]"} font-medium tracking-wide text-text-muted
           opacity-0 translate-y-0.5
           transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
           group-hover:opacity-100 group-hover:translate-y-0`}
@@ -91,8 +88,8 @@ function MarqueeTrack({
 
   return (
     <div className={`relative overflow-hidden ${offset}`}>
-      <div className="absolute inset-y-0 left-0 z-10 w-12 sm:w-20 lg:w-28 bg-gradient-to-r from-white dark:from-base-950 via-white/80 dark:via-base-950/80 to-transparent pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 z-10 w-12 sm:w-20 lg:w-28 bg-gradient-to-l from-white dark:from-base-950 via-white/80 dark:via-base-950/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 z-10 w-12 sm:w-20 lg:w-28 bg-gradient-to-r from-canvas via-canvas/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 z-10 w-12 sm:w-20 lg:w-28 bg-gradient-to-l from-canvas via-canvas/80 to-transparent pointer-events-none" />
       <div
         className={`flex ${gap} py-2.5 ${animationClass}`}
         aria-hidden="true"

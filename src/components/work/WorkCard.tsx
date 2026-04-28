@@ -19,27 +19,27 @@ export default function WorkCard({ post }: { post: ContentEntry<WorkData> }) {
 
   return (
     <div
-      className="flex flex-col justify-between p-6 sm:p-8 border border-base-200 dark:border-base-800 rounded-2xl bg-white dark:bg-base-950"
+      className="flex flex-col justify-between p-6 sm:p-8 border border-border-subtle rounded-2xl bg-surface"
     >
       <div>
         <Text
           tag="p"
           variant="textXS"
-          className="font-mono text-base-500 dark:text-base-500"
+          className="font-mono text-text-muted"
         >
           {pubDate}
         </Text>
         <Text
           tag="h3"
           variant="textLG"
-          className="mt-2 font-medium tracking-tight text-base-900 dark:text-white"
+          className="mt-2 font-medium tracking-tight text-text-primary"
         >
           {title}
         </Text>
         <Text
           tag="p"
           variant="textBase"
-          className="mt-3 text-base-500 dark:text-base-400 leading-relaxed"
+          className="mt-3 text-text-secondary leading-relaxed"
         >
           {subtitle}
         </Text>

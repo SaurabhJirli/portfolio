@@ -32,13 +32,13 @@ export default function ProjectCard1({
       title={`Read more about ${title}`}
       className="group block h-full"
     >
-      <div className="h-full flex flex-col rounded-xl border border-base-200/40 dark:border-base-800/40 bg-white dark:bg-base-950 p-6 sm:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-base-300 dark:hover:border-base-700 hover:bg-base-50/50 dark:hover:bg-base-900/30">
+      <div className="h-full flex flex-col rounded-xl border border-border-subtle bg-surface p-6 sm:p-8 transition-all duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-border-strong">
         <div className="flex items-center justify-between">
           <span className="font-mono text-[11px] text-accent-600 dark:text-accent-400 tracking-[0.15em]">
             {num}
           </span>
           {meta && (
-            <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-base-400 dark:text-base-600">
+            <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-text-muted">
               {meta}
             </span>
           )}
@@ -47,7 +47,7 @@ export default function ProjectCard1({
         <Text
           tag="h3"
           variant="textLG"
-          className="mt-4 font-medium tracking-tight text-base-900 dark:text-white text-wrap-balance"
+          className="mt-4 font-medium tracking-tight text-text-primary text-wrap-balance"
         >
           {title}
         </Text>
@@ -55,13 +55,13 @@ export default function ProjectCard1({
         <Text
           tag="p"
           variant="textSM"
-          className="mt-3 text-base-500 dark:text-base-400 leading-relaxed"
+          className="mt-3 text-text-secondary leading-relaxed"
         >
           {subtitle}
         </Text>
 
         <div className="mt-auto pt-6">
-          <span className="inline-flex items-center text-sm text-base-400 dark:text-base-500 group-hover:text-base-900 dark:group-hover:text-white transition-colors duration-300">
+          <span className="inline-flex items-center text-sm text-text-muted group-hover:text-text-primary transition-colors duration-300">
             View project
             <span
               className="inline-block ml-1 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1.5"

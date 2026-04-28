@@ -6,7 +6,7 @@ export default function WorkSection() {
   return (
     <section
       id="work"
-      className="scroll-mt-28 flex items-center min-h-[calc(100svh-80px)] py-24 lg:py-28 bg-base-50 dark:bg-base-900/50"
+      className="scroll-mt-28 flex items-center min-h-[calc(100svh-80px)] py-24 lg:py-28 bg-surface-inset"
     >
       <Wrapper variant="standard">
         <RevealWrapper stagger={0.1}>
@@ -14,7 +14,7 @@ export default function WorkSection() {
             {/* Left — editorial context */}
             <div className="flex flex-col justify-center">
               <p
-                className="text-xs font-mono uppercase tracking-[0.2em] text-base-400 dark:text-base-500"
+                className="text-xs font-mono uppercase tracking-[0.2em] text-text-muted"
                 data-reveal
               >
                 Work
@@ -23,7 +23,7 @@ export default function WorkSection() {
               <Text
                 tag="h2"
                 variant="displayLG"
-                className="mt-4 tracking-tight text-base-900 dark:text-white"
+                className="mt-4 tracking-tight text-text-primary"
                 data-reveal
               >
                 Where I&rsquo;m building right now
@@ -32,7 +32,7 @@ export default function WorkSection() {
               <Text
                 tag="p"
                 variant="textBase"
-                className="mt-5 text-base-500 dark:text-base-400 leading-relaxed max-w-[48ch]"
+                className="mt-5 text-text-secondary leading-relaxed max-w-[48ch]"
                 data-reveal
               >
                 Currently working in a full-stack role with a backend-leaning
@@ -43,34 +43,34 @@ export default function WorkSection() {
 
             {/* Right — role card */}
             <div className="flex items-center" data-reveal>
-              <div className="w-full rounded-2xl border border-base-200 dark:border-base-800 bg-white dark:bg-base-950 p-8 sm:p-10">
+              <div className="w-full rounded-2xl border border-border-subtle bg-surface shadow-card p-8 sm:p-10">
                 <Text
                   tag="h3"
                   variant="textXL"
-                  className="font-medium tracking-tight text-base-900 dark:text-white"
+                  className="font-medium tracking-tight text-text-primary"
                 >
                   Software Development Engineer (SDE)
                 </Text>
 
-                <p className="mt-3 text-sm text-base-500 dark:text-base-400 leading-relaxed">
+                <p className="mt-3 text-sm text-text-secondary leading-relaxed">
                   Touchcore Systems, Pune
                 </p>
 
-                <p className="mt-1.5 font-mono text-xs text-base-400 dark:text-base-500 tracking-wide">
+                <p className="mt-1.5 font-mono text-xs text-text-muted tracking-wide">
                   October 2024 &mdash; Present
                 </p>
 
-                <div className="mt-6 pt-5 border-t border-base-100 dark:border-base-800 flex items-center gap-2">
+                <div className="mt-6 pt-5 border-t border-border-subtle flex items-center gap-2">
                   <span
                     className="block size-1.5 rounded-full bg-emerald-500"
                     aria-hidden="true"
                   />
-                  <span className="text-xs text-base-400 dark:text-base-500">
+                  <span className="text-xs text-text-muted">
                     Current role
                   </span>
                 </div>
 
-                <p className="mt-4 text-sm text-base-400 dark:text-base-500 leading-relaxed max-w-[44ch]">
+                <p className="mt-4 text-sm text-text-muted leading-relaxed max-w-[44ch]">
                   Building practical product features across backend, cloud, and
                   frontend surfaces.
                 </p>

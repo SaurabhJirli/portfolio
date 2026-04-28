@@ -15,7 +15,7 @@ export default function HomePage() {
       <NowSection />
       <WorkSection />
       <StackPeview />
-      <section className="bg-base-50 dark:bg-base-900">
+      <section className="bg-surface-inset">
         <Wrapper variant="standard" className="py-24 lg:py-36">
           <RevealWrapper stagger={0.06}>
             <ContactCta />

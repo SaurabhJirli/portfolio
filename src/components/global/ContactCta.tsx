@@ -5,12 +5,12 @@ export default function ContactCta() {
   return (
     <div
       data-reveal
-      className="rounded-2xl border border-base-200/60 dark:border-base-800/50 bg-base-50/50 dark:bg-base-900/40 p-8 sm:p-10 lg:p-12"
+      className="rounded-2xl border border-border-subtle bg-surface p-8 sm:p-10 lg:p-12"
     >
       <Text
         tag="h3"
         variant="displaySM"
-        className="font-display italic tracking-tight text-base-900 dark:text-white text-wrap-balance"
+        className="font-display italic tracking-tight text-text-primary text-wrap-balance"
       >
         Have something worth building?
       </Text>
@@ -18,7 +18,7 @@ export default function ContactCta() {
       <Text
         tag="p"
         variant="textBase"
-        className="mt-4 text-base-500 dark:text-base-400 leading-relaxed max-w-xl"
+        className="mt-4 text-text-secondary leading-relaxed max-w-xl"
       >
         I&apos;m open to full-stack work, backend-heavy features, dashboards,
         and product ideas where clean implementation matters.

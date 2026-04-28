@@ -18,17 +18,17 @@ export default async function ProjectsPreview() {
           {/* Section header */}
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between" data-reveal>
             <div>
-              <p className="text-xs font-mono uppercase tracking-[0.2em] text-base-400 dark:text-base-500">
+              <p className="text-xs font-mono uppercase tracking-[0.2em] text-text-muted">
                 Projects
               </p>
               <Text
                 tag="h2"
                 variant="displayLG"
-                className="mt-2 italic tracking-tight font-display text-base-900 dark:text-white"
+                className="mt-2 italic tracking-tight font-display text-text-primary"
               >
                 Selected work
               </Text>
-              <p className="mt-3 text-base leading-relaxed text-base-500 dark:text-base-400 max-w-md">
+              <p className="mt-3 text-base leading-relaxed text-text-secondary max-w-md">
                 Systems and interfaces I designed and built.
               </p>
             </div>
