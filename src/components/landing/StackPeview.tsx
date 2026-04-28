@@ -6,10 +6,10 @@ import RevealWrapper from "@/components/global/RevealWrapper";
 
 export default function StackPeview() {
   return (
-    <section className="py-24 lg:py-36">
+    <section className="py-24 lg:py-32">
       <RevealWrapper stagger={0.06}>
         <Wrapper variant="standard">
-          <div className="flex items-end justify-between" data-reveal>
+          <div className="flex items-end justify-between gap-4" data-reveal>
             <Text
               tag="h2"
               variant="displayLG"
@@ -18,11 +18,11 @@ export default function StackPeview() {
               Stack
             </Text>
             <Button isLink size="xs" variant="muted" href="/stack">
-              Full stack
+              View all
             </Button>
           </div>
         </Wrapper>
-        <div className="max-w-7xl mx-auto px-6 sm:px-8" data-reveal>
+        <div className="max-w-7xl mx-auto mt-4" data-reveal>
           <StackCard1 />
         </div>
       </RevealWrapper>

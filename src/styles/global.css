@@ -125,26 +125,6 @@ h1, h2, h3 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Stack wave — primary row: strong vertical oscillation */
-@keyframes stackWavePrimary {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-14px) scale(1.06); }
-}
-
-.stack-wave-primary {
-  animation: stackWavePrimary 5s ease-in-out infinite;
-}
-
-/* Stack wave — secondary row: subtler oscillation */
-@keyframes stackWaveSecondary {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-8px) scale(1.03); }
-}
-
-.stack-wave-secondary {
-  animation: stackWaveSecondary 6s ease-in-out infinite;
-}
-
 /* Respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -162,10 +142,5 @@ h1, h2, h3 {
   .animate-rightMarquee,
   .animate-verticalMarquee {
     animation-duration: 0s;
-  }
-
-  .stack-wave-primary,
-  .stack-wave-secondary {
-    animation: none;
   }
 }
