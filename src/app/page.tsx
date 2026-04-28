@@ -1,6 +1,7 @@
 import Hero from "@/components/landing/Hero";
 import ProjectsPreview from "@/components/landing/ProjectsPreview";
-import Statement from "@/components/landing/Statement";
+import NowSection from "@/components/landing/NowSection";
+import WorkSection from "@/components/landing/WorkSection";
 import StackPeview from "@/components/landing/StackPeview";
 import ContactCta from "@/components/global/ContactCta";
 import Wrapper from "@/components/fundations/containers/Wrapper";
@@ -11,7 +12,8 @@ export default function HomePage() {
     <>
       <Hero />
       <ProjectsPreview />
-      <Statement />
+      <NowSection />
+      <WorkSection />
       <StackPeview />
       <section className="bg-base-50 dark:bg-base-900">
         <Wrapper variant="standard" className="py-24 lg:py-36">

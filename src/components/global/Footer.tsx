@@ -4,9 +4,9 @@ import Text from "@/components/fundations/elements/Text";
 import Wrapper from "@/components/fundations/containers/Wrapper";
 
 const navLinks = [
-  { text: "About", href: "/now" },
+  { text: "About", href: "/#about" },
+  { text: "Work", href: "/#work" },
   { text: "Projects", href: "/projects/" },
-  { text: "Work", href: "/work/" },
   { text: "Stack", href: "/stack" },
   { text: "Contact", href: "/forms/contact" },
 ];
@@ -67,7 +67,7 @@ export default function Footer() {
               </Text>
             </Link>
             <p className="mt-3 text-sm text-base-500 dark:text-base-400 max-w-sm leading-relaxed text-pretty">
-              Full-stack developer, mostly backend. Also frontend and cloud when needed.
+              Software development engineer building backend services, cloud-based applications, and IoT-related systems, with frontend work when the project needs it.
             </p>
           </div>
 

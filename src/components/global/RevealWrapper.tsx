@@ -15,8 +15,8 @@ export default function RevealWrapper({
   children,
   className,
   as: Tag = "div",
-  stagger = 0.06,
-  y = 14,
+  stagger = 0.08,
+  y = 18,
 }: RevealWrapperProps) {
   const ref = useRef<HTMLElement>(null);
   useScrollReveal(ref, { stagger, y });

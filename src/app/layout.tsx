@@ -49,6 +49,9 @@ export default function RootLayout({
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <noscript>
+          <style dangerouslySetInnerHTML={{ __html: '[data-reveal]{opacity:1!important;transform:none!important}' }} />
+        </noscript>
       </head>
       <body className="flex flex-col min-h-[100dvh] bg-white dark:bg-base-950 text-base-900 dark:text-white" suppressHydrationWarning>
         <div className="grain-overlay" aria-hidden="true" />

@@ -73,7 +73,6 @@ const pageData = [
         title: "Work",
         links: [
           { url: "/work/", name: "Home" },
-          { url: "/work/1", name: "Details" },
         ],
       },
       {

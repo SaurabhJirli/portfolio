@@ -104,10 +104,16 @@ html {
   opacity: 0.04;
 }
 
-/* GSAP scroll reveal — initial state before animation triggers */
-.scroll-reveal {
+/* Scroll reveal — hide data-reveal elements before GSAP fires */
+[data-reveal] {
   opacity: 0;
-  transform: translateY(30px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Typography polish */

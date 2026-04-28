@@ -10,9 +10,9 @@ import Burger from "@/components/fundations/icons/Burger";
 import Plus from "@/components/fundations/icons/Plus";
 
 const navLinks = [
-  { text: "About", href: "/now" },
+  { text: "About", href: "/#about" },
+  { text: "Work", href: "/#work" },
   { text: "Projects", href: "/projects/" },
-  { text: "Work", href: "/work/" },
   { text: "Stack", href: "/stack" },
   { text: "Contact", href: "/forms/contact" },
 ];

@@ -14,29 +14,42 @@ export default async function ProjectsPreview() {
   return (
     <section>
       <Wrapper variant="standard" className="py-24 lg:py-36">
-        <RevealWrapper stagger={0.06}>
-          <div className="flex items-end justify-between" data-reveal>
-            <Text
-              tag="h2"
-              variant="displayLG"
-              className="italic tracking-tight font-display text-base-900 dark:text-white"
-            >
-              Projects
-            </Text>
+        <RevealWrapper stagger={0.1}>
+          {/* Section header */}
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between" data-reveal>
+            <div>
+              <p className="text-xs font-mono uppercase tracking-[0.2em] text-base-400 dark:text-base-500">
+                Projects
+              </p>
+              <Text
+                tag="h2"
+                variant="displayLG"
+                className="mt-2 italic tracking-tight font-display text-base-900 dark:text-white"
+              >
+                Selected work
+              </Text>
+              <p className="mt-3 text-base leading-relaxed text-base-500 dark:text-base-400 max-w-md">
+                Systems and interfaces I designed and built.
+              </p>
+            </div>
             <Button isLink size="xs" variant="muted" href="/projects/">
-              See all
+              All projects
             </Button>
           </div>
 
+          {/* Featured project */}
           {featured && (
-            <div className="mt-10" data-reveal>
-              <ProjectCard2 post={featured} />
+            <div className="mt-14" data-reveal>
+              <ProjectCard2 post={featured} featured />
             </div>
           )}
 
-          <div className="mt-4 grid gap-4 md:grid-cols-2" data-reveal>
-            {rest.map((post) => (
-              <ProjectCard1 key={post.slug} post={post} />
+          {/* Secondary projects */}
+          <div className="mt-5 grid gap-5 md:grid-cols-2">
+            {rest.map((post, i) => (
+              <div key={post.slug} data-reveal>
+                <ProjectCard1 post={post} index={i + 2} />
+              </div>
             ))}
           </div>
         </RevealWrapper>

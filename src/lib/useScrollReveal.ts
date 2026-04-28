@@ -29,10 +29,10 @@ export default function useScrollReveal(
   options: ScrollRevealOptions = {}
 ) {
   const {
-    y = 14,
+    y = 18,
     delay = 0,
-    duration = 0.4,
-    stagger = 0.06,
+    duration = 0.7,
+    stagger = 0.08,
     start = "top 88%",
     selector = "[data-reveal]",
   } = options;
@@ -50,7 +50,7 @@ export default function useScrollReveal(
         return;
       }
 
-      gsap.set(targets, { opacity: 0, y, willChange: "transform, opacity" });
+      gsap.set(targets, { y, willChange: "transform, opacity" });
 
       ScrollTrigger.create({
         trigger: container,
