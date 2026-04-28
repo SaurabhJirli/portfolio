@@ -15,9 +15,11 @@ const FLOW_NODES = ["Devices", "MQTT", "API", "Alerts", "Reports"] as const;
 export default function ProjectCard2({
   post,
   featured = false,
+  label,
 }: {
   post: ContentEntry<ProjectData>;
   featured?: boolean;
+  label?: string;
 }) {
   const url = "/projects/" + post.slug;
   const title = post.data.title ?? "";
@@ -46,7 +48,7 @@ export default function ProjectCard2({
                   </span>
                 )}
                 <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-text-muted">
-                  {featured ? "Featured project" : "Project"}
+                  {label ?? (featured ? "Featured project" : "Project")}
                 </span>
                 {year && (
                   <span className="font-mono text-[11px] text-text-muted ml-auto">

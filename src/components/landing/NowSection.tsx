@@ -4,16 +4,16 @@ import RevealWrapper from "@/components/global/RevealWrapper";
 
 const FOCUS_ROWS = [
   {
-    num: "01",
-    text: "Backend services, APIs, and data flows",
+    label: "Systems",
+    text: "APIs, service boundaries, data movement, and backend flows that stay clear as the product grows.",
   },
   {
-    num: "02",
-    text: "Cloud and infrastructure fundamentals across AWS, Azure, Docker, and Kubernetes",
+    label: "Infrastructure",
+    text: "Cloud foundations across AWS and Azure, with Docker and Kubernetes for deployment-oriented thinking.",
   },
   {
-    num: "03",
-    text: "Frontend features with Next.js and TypeScript when the product needs it",
+    label: "Interfaces",
+    text: "Focused Next.js and TypeScript work when a backend system needs a useful product surface.",
   },
 ];
 
@@ -32,39 +32,38 @@ export default function NowSection() {
                 variant="displayLG"
                 className="tracking-tight text-text-primary"
               >
-                What I&rsquo;m focused on{" "}
-                <span className="italic font-display text-text-muted">
-                  now
-                </span>
+                What I&rsquo;m focused on now
               </Text>
               <Text
                 tag="p"
                 variant="textLG"
                 className="mt-5 text-text-secondary leading-relaxed max-w-[48ch]"
               >
-                Backend-leaning full-stack developer working across APIs, data
-                flows, cloud-based applications, and IoT-related systems.
+                I&rsquo;m shaping myself around backend-heavy product
+                engineering: building reliable systems, understanding the
+                infrastructure around them, and carrying features far enough
+                that people can actually use them.
               </Text>
               <p className="mt-6 text-xs font-mono text-text-muted tracking-wide">
-                Updated March 2026
+                Current focus &middot; March 2026
               </p>
             </div>
 
             <div className="flex flex-col">
               {FOCUS_ROWS.map((row, i) => (
                 <div
-                  key={row.num}
+                  key={row.label}
                   data-reveal
-                  className={`flex items-baseline gap-5 py-5${
+                  className={`py-5${
                     i < FOCUS_ROWS.length - 1
                       ? " border-b border-border-subtle"
                       : ""
                   }`}
                 >
-                  <span className="shrink-0 text-xs font-mono text-text-muted tabular-nums">
-                    {row.num}
+                  <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-text-muted">
+                    {row.label}
                   </span>
-                  <p className="text-base leading-relaxed text-text-secondary">
+                  <p className="mt-2 text-base leading-relaxed text-text-secondary">
                     {row.text}
                   </p>
                 </div>

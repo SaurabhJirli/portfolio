@@ -11,14 +11,10 @@ export default async function ProjectsIndexPage() {
       <Wrapper variant="standard" className="py-20 lg:py-32">
         <div className="max-w-2xl">
           <Text tag="h1" variant="displayXL" className="text-text-primary tracking-tight">
-            Things I've{" "}
-            <span className="italic font-display text-text-muted">
-              built
-            </span>
+            Projects
           </Text>
           <Text tag="p" variant="textLG" className="mt-4 text-text-secondary leading-relaxed">
-            Side projects and work projects where I got to solve interesting problems
-            and learn new tools along the way.
+            Backend systems, cloud interfaces, and product features I&apos;ve built.
           </Text>
         </div>
         <div className="flex flex-col mt-12 gap-4">

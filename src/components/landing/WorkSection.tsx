@@ -35,9 +35,9 @@ export default function WorkSection() {
                 className="mt-5 text-text-secondary leading-relaxed max-w-[48ch]"
                 data-reveal
               >
-                Currently working in a full-stack role with a backend-leaning
-                focus, contributing across product features, integrations, and
-                reliable application flows.
+                I&rsquo;m currently working in a backend-leaning full-stack
+                role, contributing to product features, integrations, and
+                application flows that need to stay reliable in real use.
               </Text>
             </div>
 
@@ -65,15 +65,29 @@ export default function WorkSection() {
                     className="block size-1.5 rounded-full bg-emerald-500"
                     aria-hidden="true"
                   />
-                  <span className="text-xs text-text-muted">
-                    Current role
+                  <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-text-muted">
+                    Current position
                   </span>
                 </div>
 
-                <p className="mt-4 text-sm text-text-muted leading-relaxed max-w-[44ch]">
-                  Building practical product features across backend, cloud, and
-                  frontend surfaces.
-                </p>
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-text-muted">
+                      Focus
+                    </span>
+                    <p className="mt-1.5 text-sm text-text-secondary leading-relaxed">
+                      Backend services, integrations, and product workflows
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-[0.15em] text-text-muted">
+                      Contribution
+                    </span>
+                    <p className="mt-1.5 text-sm text-text-secondary leading-relaxed">
+                      Building practical features across backend, cloud, and frontend surfaces.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
