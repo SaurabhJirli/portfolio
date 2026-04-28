@@ -69,6 +69,9 @@ export default function Footer() {
             <p className="mt-3 text-sm text-text-secondary max-w-sm leading-relaxed text-pretty">
               Software development engineer building backend services, cloud-based applications, and IoT-related systems, with frontend work when the project needs it.
             </p>
+            <p className="mt-3 text-sm text-text-muted max-w-sm leading-relaxed text-pretty">
+              Backend systems by day. Football, F1, Cricket, and films after hours.
+            </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
