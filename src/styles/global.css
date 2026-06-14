@@ -110,6 +110,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* WIP status pulse — gentle breathing animation */
+@keyframes wip-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.6); }
+}
+
 ::selection {
   background-color: oklch(0.897 0.196 126.665 / 0.3);
 }

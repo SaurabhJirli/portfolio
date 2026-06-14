@@ -1,17 +1,16 @@
 import type { MetadataRoute } from "next";
-import { getCollection } from "@/lib/content";
+import { getCollection, filterVisible } from "@/lib/content";
 
 const site = "https://saurabhjirli.dev";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getCollection("posts");
-  const projects = await getCollection("projects");
+  const projects = filterVisible(await getCollection("projects"));
   const store = await getCollection("store");
 
   const staticRoutes = [
     "",
     "/now",
-    "/stack",
     "/studio",
     "/forms/contact",
     "/forms/signin",

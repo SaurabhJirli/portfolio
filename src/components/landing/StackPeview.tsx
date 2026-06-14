@@ -1,28 +1,30 @@
 import Text from "@/components/fundations/elements/Text";
-import Button from "@/components/fundations/elements/Button";
 import Wrapper from "@/components/fundations/containers/Wrapper";
 import StackCard1 from "@/components/stack/StackCard1";
 import RevealWrapper from "@/components/global/RevealWrapper";
 
 export default function StackPeview() {
   return (
-    <section className="py-24 lg:py-32">
+    <section id="stack" className="scroll-mt-28 py-24 lg:py-32">
       <RevealWrapper stagger={0.06}>
         <Wrapper variant="standard">
-          <div className="flex items-end justify-between gap-4" data-reveal>
+          <div data-reveal>
+            <p className="text-xs font-mono uppercase tracking-[0.2em] text-text-muted">
+              Stack
+            </p>
             <Text
               tag="h2"
               variant="displayLG"
-              className="italic tracking-tight font-display text-text-primary"
+              className="mt-2 italic tracking-tight font-display text-text-primary"
             >
-              Stack
+              The working set
             </Text>
-            <Button isLink size="xs" variant="muted" href="/stack">
-              View all
-            </Button>
+            <p className="mt-3 text-base leading-relaxed text-text-secondary max-w-md">
+              Tools I use to build, ship, and maintain backend-heavy product systems.
+            </p>
           </div>
         </Wrapper>
-        <div className="max-w-7xl mx-auto mt-4" data-reveal>
+        <div className="max-w-7xl mx-auto mt-10" data-reveal>
           <StackCard1 />
         </div>
       </RevealWrapper>

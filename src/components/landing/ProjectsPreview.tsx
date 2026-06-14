@@ -3,10 +3,12 @@ import Text from "@/components/fundations/elements/Text";
 import Wrapper from "@/components/fundations/containers/Wrapper";
 import ProjectCard2 from "@/components/projects/ProjectCard2";
 import RevealWrapper from "@/components/global/RevealWrapper";
-import { getCollection } from "@/lib/content";
+import { getCollection, filterVisible, sortByDateDesc } from "@/lib/content";
 
 export default async function ProjectsPreview() {
-  const allProjects = await getCollection("projects");
+  const allProjects = filterVisible(
+    sortByDateDesc(await getCollection("projects"))
+  );
   const featured = allProjects[0];
 
   return (

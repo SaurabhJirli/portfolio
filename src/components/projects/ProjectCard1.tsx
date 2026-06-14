@@ -9,8 +9,7 @@ type ProjectData = {
 };
 
 const PROJECT_META: Record<string, string> = {
-  "Event Pipeline": "Kafka \u00B7 Events \u00B7 Services",
-  "This Portfolio": "Next.js \u00B7 TypeScript \u00B7 Tailwind",
+  "SkillSync AI": "AI \u00B7 Hiring \u00B7 Assessment",
 };
 
 export default function ProjectCard1({

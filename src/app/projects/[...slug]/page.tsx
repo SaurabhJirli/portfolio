@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import ProjectsLayout from "@/layouts/ProjectsLayout";
-import { getCollection } from "@/lib/content";
+import { getCollection, filterVisible } from "@/lib/content";
 
 export async function generateStaticParams() {
-  const entries = await getCollection("projects");
+  const entries = filterVisible(await getCollection("projects"));
   return entries.map((entry) => ({ slug: [entry.slug] }));
 }
 
@@ -14,7 +14,7 @@ export default async function ProjectPage({
 }) {
   const { slug: slugParts } = await params;
   const slug = slugParts.join("/");
-  const allProjects = await getCollection("projects");
+  const allProjects = filterVisible(await getCollection("projects"));
   const entry = allProjects.find((project) => project.slug === slug);
 
   if (!entry) {

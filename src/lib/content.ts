@@ -65,3 +65,9 @@ export function sortByDateDesc<T extends { data: { pubDate?: string } }>(
     return bDate - aDate;
   });
 }
+
+export function filterVisible<T extends { data: { hidden?: boolean } }>(
+  entries: T[]
+): T[] {
+  return entries.filter((entry) => !entry.data.hidden);
+}

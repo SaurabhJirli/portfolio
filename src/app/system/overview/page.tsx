@@ -16,7 +16,6 @@ const pageData = [
         title: "About",
         links: [
           { url: "/now", name: "Now" },
-          { url: "/stack", name: "Stack" },
           { url: "/socials", name: "Socials" },
           { url: "/studio", name: "Studio" },
         ],
